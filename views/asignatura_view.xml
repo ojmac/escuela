@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record id="view_asignatura_form" model="ir.ui.view">
+            <field name="name">escuela_asignatura.form</field>
+            <field name="model">escuela_asignatura</field>
+            <field name="arch" type="xml">
+                <form string="Asignatura">
+                    <sheet>
+                        <group>
+                            <field name="codigo"/>
+                            <field name="nombre"/>
+                            <field name="horas"/>
+                            <field name="grupo_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_asignatura_tree" model="ir.ui.view">
+            <field name="name">escuela_asignatura.list</field>
+            <field name="model">escuela_asignatura</field>
+            <field name="arch" type="xml">
+                <list string="Asignaturas">
+                    <field name="codigo"/>
+                    <field name="nombre"/>
+                    <field name="horas"/>
+                </list>
+            </field>
+        </record>
+
+     
+        <record id="view_asignatura_kanban" model="ir.ui.view">
+            <field name="name">escuela_asignatura.kanban</field>
+            <field name="model">escuela_asignatura</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="nombre"/>
+                    <field name="codigo"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="o_kanban_record">
+                                <div class="o_kanban_title">
+                                    <strong><t t-esc="record.nombre.value"/></strong>
+                                </div>
+                                <div>
+                                    <strong>Código:</strong> <t t-esc="record.codigo.value"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+     </data> 
+  
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="escuela_mod.list">
+      <field name="name">escuelaMod list</field>
+      <field name="model">escuela_mod.escuela_mod</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="escuela_mod.action_window">
+      <field name="name">escuelaMod window</field>
+      <field name="res_model">escuela_mod.escuela_mod</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="escuela_mod.action_server">
+      <field name="name">escuelaMod server</field>
+      <field name="model_id" ref="model_escuela_mod_escuela_mod"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="escuelaMod" id="escuela_mod.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="escuela_mod.menu_1" parent="escuela_mod.menu_root"/>
+    <menuitem name="Menu 2" id="escuela_mod.menu_2" parent="escuela_mod.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="escuela_mod.menu_1_list" parent="escuela_mod.menu_1"
+              action="escuela_mod.action_window"/>
+    <menuitem name="Server to list" id="escuela_mod" parent="escuela_mod.menu_2"
+              action="escuela_mod.action_server"/>
+-->
+  </data>
+</odoo>

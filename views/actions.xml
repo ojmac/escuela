@@ -1,0 +1,22 @@
+<odoo>
+    
+    <record id="action_estudiantes" model="ir.actions.act_window">
+        <field name="name">Estudiantes</field>
+        <field name="res_model">escuela_estudiante</field>
+        <field name="view_mode">list,form,kanban</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record id="action_asignaturas" model="ir.actions.act_window">
+        <field name="name">Asignaturas</field>
+        <field name="res_model">escuela_asignatura</field>
+        <field name="view_mode">list,form,kanban</field>
+    </record>
+
+    
+    <record id="action_grupos" model="ir.actions.act_window">
+        <field name="name">Grupos</field>
+        <field name="res_model">escuela_grupo</field>
+        <field name="view_mode">list,form,kanban</field>
+    </record>
+</odoo>

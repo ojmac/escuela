@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+       
+        <record id="view_estudiante_kanban" model="ir.ui.view">
+            <field name="name">escuela_estudiante.kanban</field>
+            <field name="model">escuela_estudiante</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="nombre"/>
+                    <field name="grupo_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="o_kanban_record">
+                                <div class="o_kanban_title">
+                                    <strong><t t-esc="record.nombre.value"/></strong>
+                                </div>
+                                <div>
+                                    <strong>Grupo:</strong> <t t-esc="record.grupo_id.value"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        
+        <record id="view_estudiante_list" model="ir.ui.view">
+            <field name="name">escuela_estudiante.list</field>
+            <field name="model">escuela_estudiante</field>
+            <field name="arch" type="xml">
+                <list string="Estudiantes">
+                    <field name="nombre"/>
+                    <field name="apellidos"/>
+                    <field name="edad"/>
+                    <field name="grupo_id"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_estudiante_form" model="ir.ui.view">
+            <field name="name">escuela_estudiante.form</field>
+            <field name="model">escuela_estudiante</field>
+            <field name="arch" type="xml">
+                <form string="Estudiante">
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="apellidos"/>
+                            <field name="edad"/>
+                            <field name="grupo_id" options="{'no_create': True}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+     
+    </data>
+   
+</odoo>

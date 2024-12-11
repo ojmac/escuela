@@ -1,0 +1,24 @@
+<odoo>
+    <template id="report_grupos">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2>Grupos</h2>
+                <t t-foreach="doc" t-as="grupo">
+                    <h3><t t-esc="grupo.descripcion"/></h3>
+                    <p>Estudiantes:</p>
+                    <ul>
+                        <t t-foreach="grupo.estudiante_ids" t-as="estudiante">
+                            <li><t t-esc="estudiante.nombre"/> <t t-esc="estudiante.apellidos"/></li>
+                        </t>
+                    </ul>
+                    <p>Asignaturas:</p>
+                    <ul>
+                        <t t-foreach="grupo.asignatura_ids" t-as="asignatura">
+                            <li><t t-esc="asignatura.nombre"/></li>
+                        </t>
+                    </ul>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

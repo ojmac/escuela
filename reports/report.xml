@@ -1,0 +1,10 @@
+<odoo>
+    <report 
+        id="report_grupos"
+        model="escuela.grupos"
+        string="Informe de Grupos"
+        report_type="qweb-pdf"
+        name="escuela.report_grupos"
+        file="escuela.report_grupos"
+    />
+</odoo>
